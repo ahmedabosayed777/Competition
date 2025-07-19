@@ -1,0 +1,332 @@
+/* style.css */
+:root {
+    --primary: #F03328;
+    --primary-light: #FF9B6A;
+    --secondary: #FFC107;
+    --dark: #1F1F1F;
+    --light: #FFF7F4;
+    --gray: #6C757D;
+    --light-gray: #E9E9E9;
+    --border: #FFEAE2;
+    --footer-bg: white;
+    --footer-text: #080707;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--dark);
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    width: 124;
+    height: 55;
+    angle: 0 deg;
+    opacity: 1;
+    font-family: Nunito;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--dark);
+    position: relative;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.btn-login {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #e04a0c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 94, 20, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #fff 50%, var(--light) 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.btn-order {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(255, 94, 20, 0.2);
+}
+
+.btn-order:hover {
+    background: #e04a0c;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 94, 20, 0.3);
+}
+
+.food-img-container {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-img-bg {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(45deg, var(--primary-light), #fad0c4);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.food-image-placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800') center/cover no-repeat;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.food-img-bg:hover .food-image-placeholder {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 4rem 0 0;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgb(26, 23, 23);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links a:hover {
+    color: white;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-selector i {
+    color: var(--footer-text);
+}
+
+.language-selector .form-select {
+    background-color: transparent;
+    color: var(--footer-text);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.language-selector .form-select:focus {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.3);
+}
