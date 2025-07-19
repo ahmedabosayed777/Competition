@@ -54,13 +54,11 @@ body {
 .logo-text {
     width: 124;
     height: 55;
-    angle: 0 deg;
     opacity: 1;
     font-family: Nunito;
     font-weight: 700;
     font-style: Bold;
     font-size: 40px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
