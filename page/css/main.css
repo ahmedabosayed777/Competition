@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-color: #ffffff;
+}
+
+main {
+    padding: 38px 71.5px;
+}
+
+/* #region section2  */
+
+.section2 {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 39px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.section2>.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    gap: 24px;
+}
+
+/* design of cards */
+.section2>.container>.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 2px 0px #00000013;
+    width: 307px;
+    height: 330px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section2>.container>.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px #00000026;
+}
+
+.section2>.container>.card>.imgs_container {
+    width: 100px;
+    height: 100px;
+}
+
+.section2>.container>.card>h2 {
+    font-family: 'Nunito';
+    font-weight: 600;
+    font-size: 30px;
+    width: 176px;
+    height: 36px;
+    color: #000000;
+}
+
+.section2>.container>.card>p {
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 20px;
+    width: 277px;
+    height: 72px;
+    color: #666666;
+    margin-top: 0px;
+}
+
+.section2>.container>.card>a {
+    display: inline-block;
+    font-family: 'Nunito';
+    width: 106px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.section2>.container>.card>a:hover {
+    color: #F03328;
+}
+
+
+
+
+
+
+/* #endregion section2  */
+
+/* #region section3  */
+.section3 {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    gap: 84px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.section3>.container_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+}
+/* title */
+.section3>.container_2>h2 {
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 50px;
+    color: #2D2D2D;
+}
+/* main imgs of section3 */
+.section3>.imgs_1> {
+    display: flex;    
+    align-items: start;
+}
+.section3>.imgs_1>img {
+    width: 578px;
+    height: 526px;
+    border-radius: 29px;
+    align-items: start;
+}
+/* cards */
+.section3>.container_2>.detils {
+    display: flex;
+    padding: 18px 16px;
+    border-radius: 18px;
+    gap: 26px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px #00000013;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.section3>.container_2>.detils:hover {
+        transform: scale(1.05);
+    box-shadow: 0px 4px 10px #00000026;
+}
+
+
+.section3 > .container_2 > .detils > .imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 90px;
+    height: 90px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2.09px 4.19px 0px #00000013;
+    overflow: hidden;
+}
+
+
+.section3>.container_2>.detils>.imgs>img {
+    width: 44px;
+    height: 44px;
+}
+.section3>.container_2>.detils>.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: start; */
+    gap: 8px;
+}
+.section3>.container_2>.detils>div>h3 {
+    font-family: 'Nunito';
+    font-weight: 600;
+    font-size: 31px;
+    color: #000000;
+    margin: 0px;
+}
+
+.section3>.container_2>.detils>div>p {
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 20px;
+    color: #404040;
+    margin-top: 0px;
+}
+
+/* #endregion section3  */
+
+/* #region responsive  */
+@media (max-width: 576px) {
+    main {
+        padding: 0;
+    }
+
+    .section2>.container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 0;
+    }
+
+    .section2>.container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 992px) { 
+    main {
+        padding: 10px;
+    }
+    .section3{
+        flex-direction: column;
+    }
+
+    .section3>.imgs_1>img {
+        width: 75%;
+        height: 75%;
+        border-radius: 29px;
+        align-items: start;
+        /* تصغير الصورة للشاشات الصغيرة */
+    }
+}
+/* #endregion responsive  */
